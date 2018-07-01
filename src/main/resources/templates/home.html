@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Quotes PnL</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/webjars/bootstrap/4.1.1/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="container mt-3">
+            <h3>- Quotes PnL</h3>
+            <ul class="list-group" id="quotes">
+                <li class="list-group-item">Loading...</li>
+            </ul>
+            <br />
+            &nbsp;<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#registerQuote">Add quote</button>
+        </div>
+
+        <div class="modal" tabindex="-1" role="dialog" id="registerQuote">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add quote</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Quote ISIN" aria-label="Quote ISIN" aria-describedby="basic-addon1" id="isin">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Price" aria-label="Price" aria-describedby="basic-addon1" id="price">
+                            <input type="text" class="form-control" placeholder="Quantity" aria-label="Quantity" aria-describedby="basic-addon1" id="quantity">
+                            <input type="text" class="form-control" placeholder="Buy fee" aria-label="Price" aria-describedby="basic-addon1" id="buyFee">
+                            <input type="text" class="form-control" placeholder="Sell fee" aria-label="Price" aria-describedby="basic-addon1" id="sellFee">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onClick="addQuote()">Add quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
